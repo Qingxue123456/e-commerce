@@ -4,14 +4,14 @@ import axios from "axios";
 import 'element-plus/theme-chalk/el-message.css'
 import { ElMessage } from 'element-plus';
 // pinia
-import { useUserStore } from "@/stores/user";
+import { useUserStore } from "@/stores/userStore";
 import router from "@/router";
 
 const httpInstance = axios.create({
     // 根域名
     baseURL: 'http://pcapi-xiaotuxian-front-devtest.itheima.net',
     // 超时时间
-    timeout: 5000
+    timeout: 100000
 })
 
 // 添加请求拦截器

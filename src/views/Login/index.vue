@@ -6,13 +6,13 @@ import { ElMessage } from 'element-plus';
 // 跳转路由
 import { useRouter } from 'vue-router';
 // pinia 管理用户数据
-import { useUserStore } from '@/stores/user';
+import { useUserStore } from '@/stores/userStore';
 
 const userStore = useUserStore()
 
 // 表单校验 (账号名 + 密码)
 const form = ref({
-    account:'heima282',
+    account:'heima290',
     password:'hm#qd@23!',
     agree: false
 })

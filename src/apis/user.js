@@ -11,3 +11,13 @@ export function loginApi({ account, password }) {
         }
     })
 }
+
+// 用户中心的 “猜你喜欢” - 当前要拉过来4个数据
+export const getLikeListAPI = ({ limit = 4 }) => {
+    return httpInstance({
+      url:'/goods/relevant',
+      params: {
+        limit 
+      }
+    })
+  }
