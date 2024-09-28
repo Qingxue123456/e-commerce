@@ -1,10 +1,16 @@
 <script setup>
+import { onBeforeRouteUpdate } from 'vue-router';
 import GoodsItem from '../Home/components/GoodsItem.vue';
 import { useBanner } from './composables/useBanner';
 import { useCategory } from './composables/useCategory';
 
 // 面包屑
-const { categoryData} = useCategory()
+const { categoryData, getCategory } = useCategory()
+onBeforeRouteUpdate((to, from, next) => {
+  getCategory()
+  next()
+})
+
 // 轮播图
 const { bannerList } = useBanner()
 

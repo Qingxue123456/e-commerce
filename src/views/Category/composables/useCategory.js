@@ -17,6 +17,7 @@ export function useCategory() {
     onBeforeRouteUpdate((to) => getCategory(to.params.id))
     
     return {
-        categoryData
+        categoryData,
+        getCategory
     }
 }

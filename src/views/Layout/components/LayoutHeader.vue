@@ -5,6 +5,7 @@ import HeaderCart from './HeaderCart.vue';
 // 使用pinia中的数据
 const categoryStore = useCategoryStore()
 
+
 </script>
 
 <template>
